@@ -19,6 +19,7 @@ type Query {
     # ): [User!]! @paginate(defaultCount: 10)
 
     users: [User!]! @ all
+    user(id: ID @eq): User @find
 }
 
 "Account of a person who utilizes this application."
