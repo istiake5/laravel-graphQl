@@ -18,7 +18,7 @@ type Query {
     #   name: String @where(operator: "like")
     # ): [User!]! @paginate(defaultCount: 10)
 
-    users: [User!]! @ all
+    users: [User!]! @ paginate
     user(id: ID @eq): User @find
 }
 
